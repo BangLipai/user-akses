@@ -19,7 +19,8 @@
             "Banglipai\\UserAkses\\": "src"
         },
         "files": [
-            "src/helpers.php"
+            "src/helpers.php",
+            "src/UserAksesServicePorvider.php"
         ]
     },
     "authors": [
