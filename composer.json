@@ -17,7 +17,11 @@
     "autoload": {
         "psr-4": {
             "Banglipai\\UserAkses\\": "src/"
-        }
+        },
+        "files": [
+            "src/helpers.php",
+            "src/UserAksesServicePorvider.php"
+        ]
     },
     "authors": [
         {
@@ -25,5 +29,12 @@
             "email": "developer.kukuh@gmail.com"
         }
     ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BangLipai\\UserAkses\\UserAksesServicePorvider"
+            ]
+        }
+    },
     "minimum-stability": "dev"
 }

@@ -30,8 +30,8 @@ class UserAksesServicePorvider extends ServiceProvider
             __DIR__ . '/../database/migrations/create_grup_anggota_table.php.stub' => $this->getMigrationFileName('create_grup_anggota_table.php'),
             __DIR__ . '/../database/migrations/create_m_akses_table.php.stub'      => $this->getMigrationFileName('create_m_akses_table.php'),
             __DIR__ . '/../database/migrations/create_m_grup_table.php.stub'       => $this->getMigrationFileName('create_m_grup_table.php'),
+            __DIR__ . '/../database/migrations/create_routes_table.php.stub'       => $this->getMigrationFileName('create_routes_table.php'),
             __DIR__ . '/../database/migrations/create_route_akses_table.php.stub'  => $this->getMigrationFileName('create_route_akses_table.php'),
-            __DIR__ . '/../database/migrations/create_route_table.php.stub'        => $this->getMigrationFileName('create_route_table.php'),
             __DIR__ . '/../database/migrations/create_user_akses_table.php.stub'   => $this->getMigrationFileName('create_user_akses_table.php'),
             __DIR__ . '/../database/migrations/create_user_grup_table.php.stub'    => $this->getMigrationFileName('create_user_grup_table.php'),
 
@@ -41,7 +41,7 @@ class UserAksesServicePorvider extends ServiceProvider
             __DIR__ . '/../database/migrations/add_foreign_keys_to_user_akses_table.php.stub'   => $this->getMigrationFileName('add_foreign_keys_to_user_akses_table.php'),
             __DIR__ . '/../database/migrations/add_foreign_keys_to_user_grup_table.php.stub'    => $this->getMigrationFileName('add_foreign_keys_to_user_grup_table.php'),
 
-        ], 'permission-migrations');
+        ]);
     }
 
     /**
