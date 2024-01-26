@@ -1,0 +1,25 @@
+{
+    "name": "banglipai/user-akses",
+    "description": "Package user akses handling laravel 8+",
+    "type": "library",
+    "require": {
+        "yajra/laravel-auditable": "^4.6",
+        "illuminate/auth": "^8.12|^9.0|^10.0|^11.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.4|^10.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Banglipai\\UserAkses\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "BangLipai",
+            "email": "developer.kukuh@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
