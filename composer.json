@@ -16,7 +16,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Banglipai\\UserAkses\\": "src/"
+            "Banglipai\\UserAkses\\": "src"
         },
         "files": [
             "src/helpers.php"
