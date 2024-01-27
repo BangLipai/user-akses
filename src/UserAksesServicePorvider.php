@@ -12,6 +12,8 @@ class UserAksesServicePorvider extends ServiceProvider
     public function boot()
     {
         $this->offerPublishing();
+
+        $this->registerCommands();
     }
 
     public function register()
@@ -46,6 +48,17 @@ class UserAksesServicePorvider extends ServiceProvider
             __DIR__ . '/../database/migrations/add_foreign_keys_to_user_grup_table.php.stub'    => $this->getMigrationFileName('add_foreign_keys_to_user_grup_table.php'),
 
         ], 'migration-userakses');
+    }
+
+    protected function registerCommands(): void
+    {
+        if (! $this->app->runningInConsole()) {
+            return;
+        }
+
+        $this->commands([
+            Commands\GenerateRoutes::class
+        ]);
     }
 
     /**
