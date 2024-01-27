@@ -26,12 +26,10 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Banglipai\\UserAkses\\": "src/"
+            "BangLipai\\UserAkses\\": "src/"
         },
         "files": [
-            "src/helpers.php",
-            "src/UserAksesServicePorvider.php",
-            "src/Commands/GenerateRoutes.php"
+            "src/helpers.php"
         ]
     },
     "authors": [
