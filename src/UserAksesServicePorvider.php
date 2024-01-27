@@ -2,6 +2,7 @@
 
 namespace BangLipai\UserAkses;
 
+use BangLipai\UserAkses\Commands\GenerateRoutes;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Collection;
 use Illuminate\Support\ServiceProvider;
@@ -52,12 +53,12 @@ class UserAksesServicePorvider extends ServiceProvider
 
     protected function registerCommands(): void
     {
-        if (! $this->app->runningInConsole()) {
+        if (!$this->app->runningInConsole()) {
             return;
         }
 
         $this->commands([
-            Commands\GenerateRoutes::class
+            GenerateRoutes::class
         ]);
     }
 
