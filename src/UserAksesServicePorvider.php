@@ -26,6 +26,10 @@ class UserAksesServicePorvider extends ServiceProvider
         }
 
         $this->publishes([
+            __DIR__.'/../config/userakses.php' => config_path('userakses.php'),
+        ], 'userakses-config');
+
+        $this->publishes([
             __DIR__ . '/../database/migrations/create_grup_akses_table.php.stub'   => $this->getMigrationFileName('create_grup_akses_table.php'),
             __DIR__ . '/../database/migrations/create_grup_anggota_table.php.stub' => $this->getMigrationFileName('create_grup_anggota_table.php'),
             __DIR__ . '/../database/migrations/create_m_akses_table.php.stub'      => $this->getMigrationFileName('create_m_akses_table.php'),
