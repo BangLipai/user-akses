@@ -2,6 +2,7 @@
 
 namespace BangLipai\UserAkses;
 
+use BangLipai\UserAkses\Commands\GenerateRoutes;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Collection;
 use Illuminate\Support\ServiceProvider;
@@ -12,6 +13,8 @@ class UserAksesServicePorvider extends ServiceProvider
     public function boot()
     {
         $this->offerPublishing();
+
+        $this->registerCommands();
     }
 
     public function register()
@@ -24,6 +27,10 @@ class UserAksesServicePorvider extends ServiceProvider
         if (!$this->app->runningInConsole()) {
             return;
         }
+
+        $this->publishes([
+            __DIR__.'/../config/userakses.php' => config_path('userakses.php'),
+        ], 'userakses-config');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_grup_akses_table.php.stub'   => $this->getMigrationFileName('create_grup_akses_table.php'),
@@ -41,6 +48,17 @@ class UserAksesServicePorvider extends ServiceProvider
             __DIR__ . '/../database/migrations/add_foreign_keys_to_user_akses_table.php.stub'   => $this->getMigrationFileName('add_foreign_keys_to_user_akses_table.php'),
             __DIR__ . '/../database/migrations/add_foreign_keys_to_user_grup_table.php.stub'    => $this->getMigrationFileName('add_foreign_keys_to_user_grup_table.php'),
 
+        ], 'migration-userakses');
+    }
+
+    protected function registerCommands(): void
+    {
+        if (!$this->app->runningInConsole()) {
+            return;
+        }
+
+        $this->commands([
+            GenerateRoutes::class
         ]);
     }
 

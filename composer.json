@@ -2,6 +2,16 @@
     "name": "banglipai/user-akses",
     "description": "Package user akses handling laravel 8+",
     "type": "library",
+    "keywords": [
+        "banglipai",
+        "user-akses",
+        "laravel",
+        "permission",
+        "permissions",
+        "roles",
+        "acl",
+        "security"
+    ],
     "require": {
         "php": "^8.0|^8.1|^8.2|^8.3",
         "yajra/laravel-auditable": "^4.6",
@@ -16,11 +26,10 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Banglipai\\UserAkses\\": "src/"
+            "BangLipai\\UserAkses\\": "src/"
         },
         "files": [
-            "src/helpers.php",
-            "src/UserAksesServicePorvider.php"
+            "src/helpers.php"
         ]
     },
     "authors": [
