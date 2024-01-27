@@ -41,7 +41,7 @@ class UserAksesServicePorvider extends ServiceProvider
             __DIR__ . '/../database/migrations/add_foreign_keys_to_user_akses_table.php.stub'   => $this->getMigrationFileName('add_foreign_keys_to_user_akses_table.php'),
             __DIR__ . '/../database/migrations/add_foreign_keys_to_user_grup_table.php.stub'    => $this->getMigrationFileName('add_foreign_keys_to_user_grup_table.php'),
 
-        ]);
+        ], 'migration-userakses');
     }
 
     /**
