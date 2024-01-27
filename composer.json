@@ -30,7 +30,8 @@
         },
         "files": [
             "src/helpers.php",
-            "src/UserAksesServicePorvider.php"
+            "src/UserAksesServicePorvider.php",
+            "src/Commands/GenerateRoutes.php"
         ]
     },
     "authors": [
