@@ -31,7 +31,7 @@ file config/app.php Anda:
 Untuk publish file konfigurasi, jalankan perintah berikut:
 
 ```bash
-php artisan vendor:publish --provider="BangliPai\UserAkses\UserAksesServiceProvider" --tag="config"
+php artisan vendor:publish --provider="BangLipai\UserAkses\UserAksesServicePorvider"
 ```
 
 Jalankan migrasi untuk membuat tabel yang diperlukan:
