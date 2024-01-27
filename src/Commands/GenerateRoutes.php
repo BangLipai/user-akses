@@ -34,7 +34,7 @@ class GenerateRoutes extends Command
     public function __construct()
     {
         parent::__construct();
-        $this->blacklist = config('userakses.blacklist');
+        $this->blacklist = config('userakses.blacklist', []);
     }
 
     /**
@@ -80,10 +80,10 @@ class GenerateRoutes extends Command
     }
 
     /**
-     * @param $controller
+     * @param string $controller
      * @return string
      */
-    protected function fromController($controller): string
+    protected function fromController(string $controller): string
     {
         $controller = Str::replace('App\\Http\\Controllers\\', '', $controller);
         $controller = Str::replace('Controller@', '.', $controller);
