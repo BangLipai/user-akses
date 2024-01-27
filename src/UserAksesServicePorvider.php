@@ -17,9 +17,12 @@ class UserAksesServicePorvider extends ServiceProvider
         $this->registerCommands();
     }
 
-    public function register()
+    public function register(): void
     {
-        //
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/userakses.php',
+            'userakses'
+        );
     }
 
     protected function offerPublishing(): void
