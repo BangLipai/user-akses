@@ -2,7 +2,7 @@
 
 namespace BangLipai\UserAkses\Models;
 
-use App\Models\Traits\AktifFilter;
+use BangLipai\Utility\Models\Traits\AktifFilter;
 use Carbon\Carbon;
 use Eloquent;
 use Illuminate\Database\Eloquent\Builder;
